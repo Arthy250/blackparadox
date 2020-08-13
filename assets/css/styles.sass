@@ -1,0 +1,92 @@
+// Blackparadox
+// Estilos: 2020
+//Version: 1.0
+
+// Variables colores
+$base: #060a0f
+$sec: #494949
+$outline: #ff6600
+$text: transparentize($sec, .5)
+
+// Estilos generales
+
+a
+  margin: 0px
+  padding: 0px
+  @extend .tslow
+  &:hover
+    color: $outline
+    text-decoration: none
+h1,h2,h3,h4,h5,h6
+  color: $base
+p
+  color: $base
+.tslow
+  -webkit-transition: all .3s ease-in-out
+  -o-transition: all .3s ease-in-out
+  transition: all .3s ease-in-out
+.pad_100
+  padding: 100px 0
+.center
+  text-align: center
+  margin: 0 auto
+// Estilos Inputs, tetarea, buttons
+
+//Estilos navbar
+
+nav
+  width: 100%
+  background-color: desaturate(red, 40)
+  padding: 10px 0
+  position: fixed
+  border-bottom: 1px solid transparent
+  z-index: 9
+  @extend .tslow
+  .logo
+    img
+      width: 100%
+      @extend .tslow
+  ul
+    margin: 0
+    margin-top: 10px
+    padding: 0
+    text-align: right
+    list-style: none
+    @extend .tslow
+    .active
+      a
+        color: $base
+        &::after
+          width: 100%
+          background-color: $base
+    li
+      display: inline-block
+      padding: 0 10px
+      a
+        position: relative
+        font-size: 16px
+        color: $text
+        &::before
+          content: ''
+          position: absolute
+          background-color: transparent
+          height: 1px
+          width: 100%
+          @extend .tslow
+        &::after
+          content: ''
+          position: absolute
+          top: 100%
+          left: 0px
+          background-color: white
+          height: 1px
+          width: 0%
+          @extend .tslow
+        &:hover
+          color: $base
+          &::before
+            width: 0%
+            background-color: $base
+          &::after
+            width: 100%
+            background-color: $base
